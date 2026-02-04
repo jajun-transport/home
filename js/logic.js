@@ -341,16 +341,19 @@ export function renderVehicles(vehicles) {
 /* ---------- Filter ---------- */
 function bindFilter() {
   const filterBtns = Array.from(document.querySelectorAll(".filterBtn"));
-
   function setActiveFilterBtn(active) {
-    filterBtns.forEach(b => {
+    filterBtns.forEach((b) => {
       const isActive = b.getAttribute("data-filter") === active;
-      b.className = isActive
-        ? "filterBtn px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-sm"
-        : "filterBtn px-4 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-sm";
+  
+      // BASE (kuning)
+      const base = "filterBtn px-4 py-2 rounded-xl text-sm font-semibold transition";
+      const activeCls = "border border-amber-300/50 bg-amber-300 text-black hover:bg-amber-200 hover:text-white";
+      const idleCls   = "border border-amber-300/30 bg-amber-300/20 text-amber-200 hover:bg-amber-300 hover:text-black";
+  
+      b.className = `${base} ${isActive ? activeCls : idleCls}`;
     });
   }
-
+  
   function applyFilter(filter) {
     const currentCards = Array.from(document.querySelectorAll(".vehicleCard"));
     currentCards.forEach(card => {
