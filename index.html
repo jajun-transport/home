@@ -9,19 +9,19 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-950 text-slate-100">
   <!-- Top bar -->
-  <div class="w-full bg-slate-900 text-white">
+  <div class="w-full bg-slate-900 text-slate-100 border-b border-emerald-500/20">
     <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-sm">
       <div class="flex items-center gap-2">
         <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
-        <span>Open booking hari ini • Fast response 08:00–22:00</span>
+        <span class="text-slate-200">Open booking hari ini • Fast response 08:00–22:00</span>
       </div>
     </div>
   </div>
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-40 border-b border-slate-200/70 backdrop-blur-md bg-[rgba(240,255,25,0.7)]">
+  <header class="sticky top-0 z-40 border-b border-slate-800/80 backdrop-blur-md bg-slate-950/80">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
       <a href="#beranda" class="flex items-center gap-2">
         <div class="h-9 w-7 text-white grid place-items-center font-bold overflow-hidden">
@@ -33,40 +33,40 @@
           />
         </div>
         <div class="leading-tight">
-          <div class="font-semibold">JajunTransport</div>
-          <div class="text-xs text-slate-500">Pemesanan Motor & Mobil</div>
+          <div class="font-semibold text-slate-100">JajunTransport</div>
+          <div class="text-xs text-slate-400">Pemesanan Motor & Mobil</div>
         </div>
       </a>
 
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="hover:text-slate-700" href="#beranda">Beranda</a>
-        <a class="hover:text-slate-700" href="#kendaraan">Kendaraan</a>
-        <a class="hover:text-slate-700" href="#cara">Cara Pesan</a>
-        <a class="hover:text-slate-700" href="#faq">FAQ</a>
-        <a class="hover:text-slate-700" href="#lokasi">Kontak</a>
+        <a class="text-slate-200 hover:text-emerald-300" href="#beranda">Beranda</a>
+        <a class="text-slate-200 hover:text-emerald-300" href="#kendaraan">Kendaraan</a>
+        <a class="text-slate-200 hover:text-emerald-300" href="#cara">Cara Pesan</a>
+        <a class="text-slate-200 hover:text-emerald-300" href="#faq">FAQ</a>
+        <a class="text-slate-200 hover:text-emerald-300" href="#lokasi">Kontak</a>
       </nav>
 
       <div class="hidden md:flex items-center gap-2">
-        <button id="btnOpenBooking" class="px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-sm shadow-lg">
+        <button id="btnOpenBooking" class="px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 hover:bg-emerald-400 text-sm shadow-lg font-semibold">
           Pesan Sekarang
         </button>
       </div>
 
-      <button id="btnMobile" class="md:hidden p-2 rounded-xl border border-slate-200 bg-white">
+      <button id="btnMobile" class="md:hidden p-2 rounded-xl border border-slate-800 bg-slate-900 text-slate-100 hover:bg-slate-800">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
 
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-800 bg-slate-950">
       <div class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-2 text-sm">
-        <a class="py-2" href="#beranda">Beranda</a>
-        <a class="py-2" href="#kendaraan">Kendaraan</a>
-        <a class="py-2" href="#cara">Cara Pesan</a>
-        <a class="py-2" href="#faq">FAQ</a>
-        <a class="py-2" href="#lokasi">Kontak</a>
-        <button id="btnOpenBooking2" class="mt-2 px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800">
+        <a class="py-2 text-slate-200 hover:text-emerald-300" href="#beranda">Beranda</a>
+        <a class="py-2 text-slate-200 hover:text-emerald-300" href="#kendaraan">Kendaraan</a>
+        <a class="py-2 text-slate-200 hover:text-emerald-300" href="#cara">Cara Pesan</a>
+        <a class="py-2 text-slate-200 hover:text-emerald-300" href="#faq">FAQ</a>
+        <a class="py-2 text-slate-200 hover:text-emerald-300" href="#lokasi">Kontak</a>
+        <button id="btnOpenBooking2" class="mt-2 px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 hover:bg-emerald-400 font-semibold">
           Pesan Sekarang
         </button>
       </div>
@@ -77,39 +77,39 @@
   <section id="beranda" class="relative">
     <div class="mx-auto max-w-7xl px-4 py-10 md:py-14 grid lg:grid-cols-2 gap-8 items-center">
       <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-sm border border-emerald-100">
-          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-200 text-sm border border-emerald-500/20">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
           <span>Booking cepat via WhatsApp</span>
         </div>
 
-        <h1 class="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
-          Sewa Motor & Mobil di <span class="text-slate-900">JajunTransport</span>
+        <h1 class="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-slate-100">
+          Sewa Motor & Mobil di <span class="text-emerald-300">JajunTransport</span>
         </h1>
-        <p class="mt-3 text-slate-600 text-base md:text-lg">
+        <p class="mt-3 text-slate-300 text-base md:text-lg">
           Pilih unit, lihat harga/hari, isi tanggal ambil & pengembalian, lalu otomatis chat admin.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3">
-          <button id="btnScrollKendaraan" class="px-5 py-3 rounded-2xl bg-slate-900 text-white hover:bg-slate-800 shadow-lg">
+          <button id="btnScrollKendaraan" class="px-5 py-3 rounded-2xl bg-emerald-500 text-slate-950 hover:bg-emerald-400 shadow-lg font-semibold">
             Lihat Kendaraan
           </button>
-          <button id="btnChatAdmin" class="px-5 py-3 rounded-2xl border border-slate-300 bg-white hover:bg-slate-50">
+          <button id="btnChatAdmin" class="px-5 py-3 rounded-2xl border border-emerald-500/30 bg-slate-950 hover:bg-emerald-500/10 text-emerald-200">
             Chat Admin
           </button>
         </div>
 
         <div class="mt-7 grid grid-cols-3 gap-3 text-sm">
-          <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-lg">
-            <div class="font-semibold">Harga jelas</div>
-            <div class="text-slate-600 mt-1">Per hari</div>
+          <div class="rounded-2xl bg-slate-900 border border-slate-800 p-4 shadow-lg">
+            <div class="font-semibold text-slate-100">Harga jelas</div>
+            <div class="text-slate-400 mt-1">Per hari</div>
           </div>
-          <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-lg">
-            <div class="font-semibold">Status unit</div>
-            <div class="text-slate-600 mt-1">Tersedia/Habis</div>
+          <div class="rounded-2xl bg-slate-900 border border-slate-800 p-4 shadow-lg">
+            <div class="font-semibold text-slate-100">Status unit</div>
+            <div class="text-slate-400 mt-1">Tersedia/Habis</div>
           </div>
-          <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-lg">
-            <div class="font-semibold">Form lengkap</div>
-            <div class="text-slate-600 mt-1">Ambil & kembali</div>
+          <div class="rounded-2xl bg-slate-900 border border-slate-800 p-4 shadow-lg">
+            <div class="font-semibold text-slate-100">Form lengkap</div>
+            <div class="text-slate-400 mt-1">Ambil & kembali</div>
           </div>
         </div>
       </div>
@@ -117,16 +117,16 @@
       <!-- Slider Card -->
       <div class="lg:justify-self-end w-full">
         <!-- Card: lebar konsisten -->
-        <div class="w-full max-w-[660px] lg:w-[620px] lg:max-w-none rounded-3xl bg-white border border-slate-200 shadow-lg overflow-hidden">
+        <div class="w-full max-w-[660px] lg:w-[620px] lg:max-w-none rounded-3xl bg-slate-900 border border-slate-800 shadow-lg overflow-hidden">
           <!-- Header: tinggi stabil -->
-          <div class="p-4 border-b border-slate-200 flex items-start justify-between gap-2 min-h-[72px]">
+          <div class="p-4 border-b border-slate-800 flex items-start justify-between gap-2 min-h-[72px]">
             <div>
-              <div class="font-semibold">Galeri</div>
+              <div class="font-semibold text-slate-100">Galeri</div>
             </div>
           </div>
-      
+
           <!-- Media: tinggi stabil (aspect ratio) -->
-          <div class="relative bg-slate-100">
+          <div class="relative bg-slate-800/60">
             <div class="relative w-full aspect-[16/10]">
               <img
                 id="slideImg"
@@ -135,15 +135,15 @@
                 referrerpolicy="no-referrer"
                 loading="eager"
               />
-      
+
               <!-- Left Arrow -->
               <button
                 id="prevSlide"
                 type="button"
                 class="absolute left-3 top-1/2 -translate-y-1/2 z-10
-                       h-11 w-11 rounded-2xl bg-white/85 hover:bg-white
-                       border border-slate-200 shadow-lg grid place-items-center
-                       text-slate-900"
+                       h-11 w-11 rounded-2xl bg-slate-950/80 hover:bg-slate-950
+                       border border-slate-800 shadow-lg grid place-items-center
+                       text-slate-100"
                 aria-label="Sebelumnya"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
@@ -152,15 +152,15 @@
                         d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-      
+
               <!-- Right Arrow -->
               <button
                 id="nextSlide"
                 type="button"
                 class="absolute right-3 top-1/2 -translate-y-1/2 z-10
-                       h-11 w-11 rounded-2xl bg-white/85 hover:bg-white
-                       border border-slate-200 shadow-lg grid place-items-center
-                       text-slate-900"
+                       h-11 w-11 rounded-2xl bg-slate-950/80 hover:bg-slate-950
+                       border border-slate-800 shadow-lg grid place-items-center
+                       text-slate-100"
                 aria-label="Berikutnya"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
@@ -169,30 +169,30 @@
                         d="M9 5l7 7-7 7" />
                 </svg>
               </button>
-      
+
               <!-- Dots (Dynamic) -->
               <div id="slideDots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10"></div>
-      
+
               <!-- Gradient -->
-              <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/25 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/50 to-transparent"></div>
             </div>
           </div>
-      
-          <!-- Footer: tinggi stabil, label tidak bikin box melebar/tinggi -->
+
+          <!-- Footer -->
           <div class="p-4 flex items-center justify-between gap-3 text-sm min-h-[64px]">
-            <span id="slideLabel" class="text-slate-600 line-clamp-2">
+            <span id="slideLabel" class="text-slate-300 line-clamp-2">
               Unit: Motor / Mobil
             </span>
-      
+
             <button
               id="btnOpenBookingHero"
-              class="shrink-0 px-4 py-2 rounded-xl bg-emerald-400 text-slate-900 hover:bg-emerald-300 font-medium"
+              class="shrink-0 px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 hover:bg-emerald-400 font-semibold"
             >
               Pesan dari Beranda
             </button>
           </div>
         </div>
-      </div>            
+      </div>
     </div>
   </section>
 
@@ -200,48 +200,57 @@
   <section id="kendaraan" class="mx-auto max-w-7xl px-4 pb-14">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
       <div>
-        <h2 class="text-2xl md:text-3xl font-semibold">Pilihan Kendaraan</h2>
-        <p class="mt-2 text-slate-600">Gunakan filter kategori, lalu klik “Pesan”.</p>
+        <h2 class="text-2xl md:text-3xl font-semibold text-slate-100">Pilihan Kendaraan</h2>
+        <p class="mt-2 text-slate-300">Gunakan filter kategori, lalu klik “Pesan”.</p>
       </div>
-      <button id="btnOpenBooking3" class="px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-sm shadow-lg">
+      <button id="btnOpenBooking3" class="px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 hover:bg-emerald-400 text-sm shadow-lg font-semibold">
         Pesan Sekarang
       </button>
     </div>
 
     <!-- FILTER -->
     <div class="mt-6 flex flex-wrap gap-2">
-      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-sm"
-              data-filter="all">Semua</button>
-      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-sm"
-              data-filter="motor">Motor</button>
-      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-sm"
-              data-filter="mobil">Mobil</button>
+      <button
+        class="filterBtn px-4 py-2 rounded-xl border border-amber-300/40 bg-amber-300 hover:bg-amber-200 text-sm text-black hover:text-white font-semibold"
+        data-filter="all"
+      >Semua</button>
+    
+      <button
+        class="filterBtn px-4 py-2 rounded-xl border border-amber-300/40 bg-amber-300 hover:bg-amber-200 text-sm text-black hover:text-white font-semibold"
+        data-filter="motor"
+      >Motor</button>
+    
+      <button
+        class="filterBtn px-4 py-2 rounded-xl border border-amber-300/40 bg-amber-300 hover:bg-amber-200 text-sm text-black hover:text-white font-semibold"
+        data-filter="mobil"
+      >Mobil</button>
     </div>
+    
 
     <!-- NOTE: vehicleGrid sekarang kosong, akan diisi otomatis dari Sheets -->
     <div id="vehicleGrid" class="mt-7 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
 
-    <p class="mt-4 text-xs text-slate-500">
+    <p class="mt-4 text-xs text-slate-400">
       Data kendaraan ditarik otomatis dari Google Sheets. Admin cukup update data di dashboard/admin.
     </p>
   </section>
 
   <!-- CARA PESAN -->
   <section id="cara" class="mx-auto max-w-7xl px-4 pb-14">
-    <div class="rounded-3xl bg-white border border-slate-200 p-6 md:p-8 shadow-lg">
-      <h2 class="text-2xl md:text-3xl font-semibold">Cara Pemesanan</h2>
+    <div class="rounded-3xl bg-slate-900 border border-slate-800 p-6 md:p-8 shadow-lg">
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-100">Cara Pemesanan</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-4 text-sm">
-        <div class="rounded-2xl border border-slate-200 p-5">
-          <div class="font-semibold">1) Pilih unit</div>
-          <div class="mt-1 text-slate-600">Filter Motor/Mobil, lalu klik “Pesan”.</div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-950/20 p-5">
+          <div class="font-semibold text-slate-100">1) Pilih unit</div>
+          <div class="mt-1 text-slate-300">Filter Motor/Mobil, lalu klik “Pesan”.</div>
         </div>
-        <div class="rounded-2xl border border-slate-200 p-5">
-          <div class="font-semibold">2) Isi ambil & kembali</div>
-          <div class="mt-1 text-slate-600">Tanggal & jam pengambilan + pengembalian.</div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-950/20 p-5">
+          <div class="font-semibold text-slate-100">2) Isi ambil & kembali</div>
+          <div class="mt-1 text-slate-300">Tanggal & jam pengambilan + pengembalian.</div>
         </div>
-        <div class="rounded-2xl border border-slate-200 p-5">
-          <div class="font-semibold">3) Kirim WA</div>
-          <div class="mt-1 text-slate-600">Pesan otomatis ke admin untuk konfirmasi.</div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-950/20 p-5">
+          <div class="font-semibold text-slate-100">3) Kirim WA</div>
+          <div class="mt-1 text-slate-300">Pesan otomatis ke admin untuk konfirmasi.</div>
         </div>
       </div>
     </div>
@@ -249,16 +258,16 @@
 
   <!-- FAQ -->
   <section id="faq" class="mx-auto max-w-7xl px-4 pb-14">
-    <div class="rounded-3xl bg-white border border-slate-200 p-6 md:p-8 shadow-lg">
-      <h2 class="text-2xl md:text-3xl font-semibold">FAQ</h2>
+    <div class="rounded-3xl bg-slate-900 border border-slate-800 p-6 md:p-8 shadow-lg">
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-100">FAQ</h2>
       <div class="mt-6 grid md:grid-cols-2 gap-4">
-        <details class="rounded-2xl border border-slate-200 p-4">
-          <summary class="cursor-pointer font-medium">Bisa sewa harian/mingguan?</summary>
-          <p class="mt-2 text-sm text-slate-600">Bisa. Pilih durasi di form booking.</p>
+        <details class="rounded-2xl border border-slate-800 bg-slate-950/20 p-4">
+          <summary class="cursor-pointer font-medium text-slate-100">Bisa sewa harian/mingguan?</summary>
+          <p class="mt-2 text-sm text-slate-300">Bisa. Pilih durasi di form booking.</p>
         </details>
-        <details class="rounded-2xl border border-slate-200 p-4">
-          <summary class="cursor-pointer font-medium">Kalau unit habis gimana?</summary>
-          <p class="mt-2 text-sm text-slate-600">Status “Habis” berarti tidak bisa dipesan. Kamu bisa chat admin untuk alternatif.</p>
+        <details class="rounded-2xl border border-slate-800 bg-slate-950/20 p-4">
+          <summary class="cursor-pointer font-medium text-slate-100">Kalau unit habis gimana?</summary>
+          <p class="mt-2 text-sm text-slate-300">Status “Habis” berarti tidak bisa dipesan. Kamu bisa chat admin untuk alternatif.</p>
         </details>
       </div>
     </div>
@@ -267,290 +276,52 @@
   <!-- Kontak -->
   <section id="lokasi" class="mx-auto max-w-7xl px-4 pb-16">
     <div class="grid md:grid-cols-2 gap-6">
-      <div class="rounded-3xl bg-white border border-slate-200 p-6 shadow-lg">
-        <h2 class="text-2xl font-semibold">Kontak JajunTransport</h2>
-        <p class="mt-2 text-slate-600 text-sm">WhatsApp admin: <span class="font-medium">+62 823 3305 2079</span></p>
+      <div class="rounded-3xl bg-slate-900 border border-slate-800 p-6 shadow-lg">
+        <h2 class="text-2xl font-semibold text-slate-100">Kontak JajunTransport</h2>
+        <p class="mt-2 text-slate-300 text-sm">WhatsApp admin: <span class="font-medium text-slate-100">+62 823 3305 2079</span></p>
 
         <div class="mt-6 flex flex-wrap gap-2">
-          <button id="btnChatAdmin2" class="px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-sm">
+          <button id="btnChatAdmin2" class="px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 hover:bg-emerald-400 text-sm font-semibold">
             Chat WhatsApp
           </button>
-          <button id="btnOpenBooking4" class="px-4 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-sm">
+          <button id="btnOpenBooking4" class="px-4 py-2 rounded-xl border border-emerald-500/30 bg-slate-950 hover:bg-emerald-500/10 text-sm text-emerald-200">
             Isi Form Booking
           </button>
         </div>
       </div>
 
-      <div class="rounded-3xl bg-white border border-slate-200 p-0 shadow-lg overflow-hidden">
-        <div class="h-full min-h-[280px] grid place-items-center bg-slate-100 text-slate-600 text-sm">
+      <div class="rounded-3xl bg-slate-900 border border-slate-800 p-0 shadow-lg overflow-hidden">
+        <div class="h-full min-h-[280px] grid place-items-center bg-slate-950 text-slate-300 text-sm">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.4872234295663!2d113.24555787443916!3d-8.153566281674966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd667002f7a13cf%3A0x1b3bf0b828178624!2sJajun%20Transport%20Garage!5e0!3m2!1sid!2sid!4v1769813235570!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="border-t border-slate-200 bg-white">
+  <footer class="border-t border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-7xl px-4 py-10 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
-      <div class="text-sm text-slate-600">
+      <div class="text-sm text-slate-300">
         © <span id="year"></span> JajunTransport • All rights reserved.
       </div>
       <div class="flex gap-4 text-sm">
-        <a class="text-slate-600 hover:text-slate-900" href="#beranda">Beranda</a>
-        <a class="text-slate-600 hover:text-slate-900" href="#kendaraan">Kendaraan</a>
-        <a class="text-slate-600 hover:text-slate-900" href="#lokasi">Kontak</a>
+        <a class="text-slate-300 hover:text-emerald-300" href="#beranda">Beranda</a>
+        <a class="text-slate-300 hover:text-emerald-300" href="#kendaraan">Kendaraan</a>
+        <a class="text-slate-300 hover:text-emerald-300" href="#lokasi">Kontak</a>
       </div>
     </div>
   </footer>
 
   <!-- Floating WhatsApp -->
-  <button id="fabWA" class="fixed bottom-5 right-5 z-50 rounded-2xl bg-emerald-400 text-slate-900 shadow-lg px-4 py-3 flex items-center gap-2 hover:bg-emerald-300">
+  <button id="fabWA" class="fixed bottom-5 right-5 z-50 rounded-2xl bg-emerald-500 text-slate-950 shadow-lg px-4 py-3 flex items-center gap-2 hover:bg-emerald-400 font-semibold">
     <span class="font-semibold">WhatsApp</span>
     <span class="text-sm opacity-80">Chat</span>
   </button>
 
-  <!-- Loading Overlay -->
-  <div id="loadingOverlay" class="fixed inset-0 z-[60] hidden">
-    <div class="absolute inset-0 bg-black/40"></div>
-    <div class="absolute inset-0 flex items-center justify-center p-4">
-      <div class="w-full max-w-sm rounded-2xl bg-white border border-slate-200 shadow-lg p-5">
-        <div class="flex items-center gap-3">
-          <div class="h-5 w-5 animate-spin rounded-full border-2 border-slate-300 border-t-slate-900"></div>
-          <div>
-            <div class="font-semibold">Memuat data kendaraan…</div>
-            <div class="text-sm text-slate-500">Mohon tunggu sebentar</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Non-blocking error banner -->
-  <div id="errorBanner" class="fixed top-3 left-1/2 -translate-x-1/2 z-[70] hidden">
-    <div class="rounded-2xl bg-rose-600 text-white px-4 py-3 shadow-lg max-w-[92vw]">
-      <div class="font-semibold text-sm">Gagal memuat data kendaraan</div>
-      <div id="errorBannerText" class="text-xs opacity-90 mt-1"></div>
-      <div class="mt-2 flex gap-2">
-        <button id="btnRetry" class="px-3 py-1.5 rounded-xl bg-white/20 hover:bg-white/30 text-xs">Coba lagi</button>
-        <button id="btnCloseError" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs">Tutup</button>
-      </div>
-    </div>
-  </div>
-
-<!-- Booking Modal (Scrollable) -->
-<div id="modal" class="fixed inset-0 z-50 hidden">
-  <!-- Backdrop -->
-  <div class="absolute inset-0 bg-black/50"></div>
-
-  <!-- Wrapper: allow inner scrolling -->
-  <div class="absolute inset-0 flex items-center justify-center p-4">
-    <div class="w-full max-w-2xl rounded-3xl bg-white shadow-lg border border-slate-200 overflow-hidden
-                max-h-[88vh] flex flex-col">
-
-      <!-- Header (sticky) -->
-      <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-white sticky top-0 z-10">
-        <div>
-          <div class="font-semibold text-lg">Form Pemesanan JajunTransport</div>
-          <div class="text-sm text-slate-500">Isi data → kirim otomatis ke WhatsApp admin</div>
-        </div>
-
-        <!-- TOMBOL CLOSE (WAJIB ADA & FIX) -->
-        <button
-          id="btnClose"
-          type="button"
-          class="h-9 w-9 grid place-items-center rounded-xl text-slate-500 hover:bg-slate-100 hover:text-slate-900 transition"
-          aria-label="Tutup modal"
-        >✕</button>
-      </div>
-
-      <!-- Body: scrollable area -->
-      <div class="p-5 overflow-y-auto">
-        <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-          <!-- Kendaraan / Layanan (2 mode: dropdown / locked input) -->
-          <div class="md:col-span-2">
-            <label class="text-sm font-medium">Kendaraan / Layanan</label>
-
-            <!-- Mode A: dropdown (untuk tombol Pesan Sekarang) -->
-            <select id="topikSelect"
-              class="mt-1 hidden w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900">
-              <option value="">Pilih kendaraan yang tersedia…</option>
-            </select>
-
-            <!-- Mode B: terkunci (klik dari card) -->
-            <input id="topik" type="text" readonly
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 bg-slate-50 text-slate-700 focus:outline-none" />
-
-            <p id="topikHint" class="mt-1 text-xs text-slate-500 hidden"></p>
-          </div>
-
-          <div>
-            <label class="text-sm font-medium">Durasi</label>
-            <select id="durasi"
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900">
-              <option value="Harian">Harian</option>
-              <option value="Mingguan">Mingguan</option>
-              <option value="Bulanan">Bulanan</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="text-sm font-medium">Jumlah Unit</label>
-            <input id="unit" type="number" min="1" value="1"
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900" />
-          </div>
-
-          <div>
-            <label class="text-sm font-medium">Tanggal Ambil</label>
-            <input id="tglAmbil" type="date"
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900" />
-          </div>
-
-          <div>
-            <label class="text-sm font-medium">Jam Ambil</label>
-            <input id="jamAmbil" type="time"
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900" />
-          </div>
-
-          <div>
-            <label class="text-sm font-medium">Tanggal Pengembalian</label>
-            <input id="tglKembali" type="date"
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900" />
-          </div>
-
-          <div>
-            <label class="text-sm font-medium">Jam Pengembalian</label>
-            <input id="jamKembali" type="time"
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900" />
-          </div>
-
-          <div>
-            <label class="text-sm font-medium">Nama Pemesan</label>
-            <input id="nama" type="text" required placeholder="Nama kamu"
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900" />
-          </div>
-
-          <div>
-            <label class="text-sm font-medium">No. WhatsApp</label>
-            <input id="wa" type="tel" required placeholder="08xxxx"
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900" />
-          </div>
-
-          <div class="md:col-span-2">
-            <label class="text-sm font-medium">Catatan</label>
-            <textarea id="catatan" rows="3" placeholder="Contoh: lokasi antar/ambil, butuh helm, dll."
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900"></textarea>
-          </div>
-
-          <!-- Footer actions (sticky in mobile feel) -->
-          <div class="md:col-span-2 flex flex-col md:flex-row gap-2 pt-2">
-            <button type="submit"
-              class="md:flex-1 px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800">
-              Kirim ke WhatsApp Admin
-            </button>
-          </div>
-
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- Detail Modal -->
-  <div id="detailModal" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-black/50"></div>
-
-    <div class="absolute inset-0 flex items-center justify-center p-4">
-      <div class="w-full max-w-3xl rounded-3xl bg-white shadow-lg border border-slate-200 overflow-hidden
-                  max-h-[88vh] flex flex-col">
-
-        <!-- Header -->
-        <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-white sticky top-0 z-10">
-          <div class="min-w-0">
-            <div id="detailTitle" class="font-semibold text-lg truncate">Detail Kendaraan</div>
-            <div id="detailSub" class="text-sm text-slate-500 truncate"></div>
-          </div>
-          <button id="btnCloseDetail" class="h-9 w-9 grid place-items-center rounded-xl hover:bg-slate-100">✕</button>
-        </div>
-
-        <!-- Body (scrollable) -->
-        <div class="p-5 overflow-y-auto space-y-5">
-          <!-- Image (object-contain so it shows full, not cropped) -->
-          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-3">
-            <img
-              id="detailImg"
-              alt="Foto kendaraan"
-              class="mx-auto max-w-full h-auto max-h-[60vh] object-contain"
-              loading="lazy"
-              referrerpolicy="no-referrer"
-            />
-
-            <div class="mt-3 flex items-center justify-between gap-3">
-              <div id="detailImgHint" class="text-xs text-slate-500">
-                Klik “Buka ukuran asli” untuk melihat resolusi penuh.
-              </div>
-              <a id="detailOpenOriginal" href="#" target="_blank"
-                class="text-xs px-3 py-1.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50">
-                Buka ukuran asli
-              </a>
-            </div>
-          </div>
-
-          <!-- Info grid -->
-          <div class="grid md:grid-cols-2 gap-4">
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <div class="text-xs text-slate-500">Nama</div>
-              <div id="detailNama" class="font-semibold"></div>
-            </div>
-
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <div class="text-xs text-slate-500">Kategori</div>
-              <div id="detailKategori" class="font-semibold"></div>
-            </div>
-
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <div class="text-xs text-slate-500">Harga</div>
-              <div id="detailHarga" class="font-semibold"></div>
-            </div>
-
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <div class="text-xs text-slate-500">Ketersediaan</div>
-              <div id="detailAvail" class="font-semibold"></div>
-            </div>
-          </div>
-
-          <!-- Deskripsi -->
-          <div class="rounded-2xl border border-slate-200 p-4">
-            <div class="text-xs text-slate-500">Deskripsi</div>
-            <p id="detailDeskripsi" class="mt-2 text-sm text-slate-700 whitespace-pre-wrap"></p>
-          </div>
-
-          <!-- Detail lengkap -->
-          <div class="rounded-2xl border border-slate-200 p-4">
-            <div class="text-xs text-slate-500">Detail Lengkap</div>
-            <p id="detailText" class="mt-2 text-sm text-slate-700 whitespace-pre-wrap"></p>
-          </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="p-5 border-t border-slate-200 bg-white flex gap-2">
-          <button id="btnPesanFromDetail"
-            class="flex-1 px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-sm">
-            Pesan Sekarang
-          </button>
-          <button id="btnCloseDetail2"
-            class="flex-1 px-4 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-sm">
-            Tutup
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Preview Toast -->
   <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden">
-    <div class="rounded-2xl bg-slate-900 text-white px-4 py-3 shadow-lg max-w-[92vw]">
-      <div class="text-sm font-semibold">Preview Pesan</div>
-      <pre id="toastText" class="mt-1 text-xs whitespace-pre-wrap text-white/90"></pre>
+    <div class="rounded-2xl bg-slate-900 border border-slate-800 text-slate-100 px-4 py-3 shadow-lg max-w-[92vw]">
+      <div class="text-sm font-semibold text-slate-100">Preview Pesan</div>
+      <pre id="toastText" class="mt-1 text-xs whitespace-pre-wrap text-slate-200/90"></pre>
     </div>
   </div>
 
@@ -558,7 +329,3 @@
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
