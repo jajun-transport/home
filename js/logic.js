@@ -35,9 +35,14 @@ function driveViewFromId(fileId) {
   return `https://drive.google.com/uc?export=view&id=${encodeURIComponent(id)}`;
 }
 
+/**
+ * DARK THEME:
+ * - ganti background dari slate-200/100 -> slate-900/950
+ * - ganti text dari slate-700/600 -> slate-200/300
+ */
 function fallbackSvg(text = "Foto tidak tersedia") {
   const t = encodeURIComponent(text);
-  return `data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22500%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e2e8f0%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23334155%22 font-family=%22Arial%22 font-size=%2224%22>${t}</text></svg>`;
+  return `data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22500%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230f172a%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23e2e8f0%22 font-family=%22Arial%22 font-size=%2224%22>${t}</text></svg>`;
 }
 
 function openWA(message) {
@@ -281,35 +286,36 @@ export function renderVehicles(vehicles) {
     const detail = v.detail || "-";
 
     const card = document.createElement("div");
-    card.className = "vehicleCard rounded-3xl bg-white border border-slate-200 shadow-lg overflow-hidden flex flex-col";
+    // DARK: bg/border jadi gelap
+    card.className = "vehicleCard rounded-3xl bg-slate-900/60 border border-slate-800 shadow-lg overflow-hidden flex flex-col";
     card.setAttribute("data-category", kategori);
     card.setAttribute("data-available", available ? "true" : "false");
     card.setAttribute("data-price", String(harga));
     card.setAttribute("data-idx", String(idx)); // ✅ penting untuk detail
 
     card.innerHTML = `
-      <div class="w-full h-52 sm:h-56 bg-slate-100 overflow-hidden">
+      <div class="w-full h-52 sm:h-56 bg-slate-950 overflow-hidden">
         <img class="vehicleImg w-full h-full object-cover" alt="${esc(nama)}" loading="lazy" referrerpolicy="no-referrer" />
       </div>
 
       <div class="p-5 flex-1 flex flex-col">
         <div class="flex items-start justify-between gap-3">
           <div>
-            <div class="font-semibold text-lg leading-snug">${esc(nama)}</div>
-            <div class="mt-1 text-sm text-slate-600">Rp <span class="priceText">${rupiah(harga)}</span> / hari</div>
+            <div class="font-semibold text-lg leading-snug text-slate-100">${esc(nama)}</div>
+            <div class="mt-1 text-sm text-slate-300">Rp <span class="priceText">${rupiah(harga)}</span> / hari</div>
           </div>
           <div class="flex flex-col items-end gap-2">
-            <span class="typeBadge text-xs px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">${typeLabel}</span>
-            <span class="availBadge text-xs px-2 py-1 rounded-full ${available ? "bg-emerald-50 text-emerald-700 border border-emerald-100" : "bg-rose-50 text-rose-700 border border-rose-100"}">
+            <span class="typeBadge text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">${typeLabel}</span>
+            <span class="availBadge text-xs px-2 py-1 rounded-full ${available ? "bg-emerald-500/10 text-emerald-300 border border-emerald-500/20" : "bg-rose-500/10 text-rose-300 border border-rose-500/20"}">
               ${available ? "Tersedia" : "Habis"}
             </span>
           </div>
         </div>
 
-        <p class="mt-2 text-sm text-slate-600 line-clamp-2">${esc(deskripsi)}</p>
+        <p class="mt-2 text-sm text-slate-300 line-clamp-2">${esc(deskripsi)}</p>
 
         <div class="mt-4 flex gap-2">
-          <button class="btnPesan flex-1 px-4 py-2 rounded-xl ${available ? "bg-slate-900 text-white hover:bg-slate-800" : "bg-slate-400 text-white cursor-not-allowed"} text-sm"
+          <button class="btnPesan flex-1 px-4 py-2 rounded-xl ${available ? "bg-emerald-400 text-slate-950 hover:bg-emerald-300" : "bg-slate-700 text-slate-200 cursor-not-allowed"} text-sm"
             ${available ? "" : "disabled"}
             data-item="${esc(`Sewa ${typeLabel} ${nama}`)}"
             data-price="${harga}">
@@ -317,7 +323,7 @@ export function renderVehicles(vehicles) {
           </button>
 
           <!-- ✅ Detail pakai idx (bukan data-detail) -->
-          <button class="btnDetail px-4 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-sm"
+          <button class="btnDetail px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-100 text-sm"
             data-idx="${idx}">
             Detail
           </button>
@@ -341,19 +347,16 @@ export function renderVehicles(vehicles) {
 /* ---------- Filter ---------- */
 function bindFilter() {
   const filterBtns = Array.from(document.querySelectorAll(".filterBtn"));
+
   function setActiveFilterBtn(active) {
-    filterBtns.forEach((b) => {
+    filterBtns.forEach(b => {
       const isActive = b.getAttribute("data-filter") === active;
-  
-      // BASE (kuning)
-      const base = "filterBtn px-4 py-2 rounded-xl text-sm font-semibold transition";
-      const activeCls = "border border-amber-300/50 bg-amber-300 text-black hover:bg-amber-200 hover:text-white";
-      const idleCls   = "border border-amber-300/30 bg-amber-300/20 text-amber-200 hover:bg-amber-300 hover:text-black";
-  
-      b.className = `${base} ${isActive ? activeCls : idleCls}`;
+      b.className = isActive
+        ? "filterBtn px-4 py-2 rounded-xl bg-emerald-400 text-slate-950 hover:bg-emerald-300 text-sm"
+        : "filterBtn px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-100 text-sm";
     });
   }
-  
+
   function applyFilter(filter) {
     const currentCards = Array.from(document.querySelectorAll(".vehicleCard"));
     currentCards.forEach(card => {
@@ -382,9 +385,10 @@ function initSlider() {
   if (!slideImg || !slideLabel || !nextBtn || !prevBtn || !dotsWrap) return;
   if (!Array.isArray(SLIDES) || SLIDES.length === 0) return;
 
+  // DARK: fallback SVG untuk slider juga gelap
   function localFallbackSvg(text = "Foto gagal dimuat") {
     const t = encodeURIComponent(text);
-    return `data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22500%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e2e8f0%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23334155%22 font-family=%22Arial%22 font-size=%2224%22>${t}</text></svg>`;
+    return `data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22500%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230f172a%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23e2e8f0%22 font-family=%22Arial%22 font-size=%2224%22>${t}</text></svg>`;
   }
 
   function extractDriveId(url) {
@@ -414,8 +418,8 @@ function initSlider() {
       const d = document.createElement("button");
       d.type = "button";
       d.className =
-        "dot h-2.5 w-2.5 rounded-full ring-1 ring-black/10 transition " +
-        (idx === slideIndex ? "bg-white" : "bg-white/60 hover:bg-white/80");
+        "dot h-2.5 w-2.5 rounded-full ring-1 ring-white/10 transition " +
+        (idx === slideIndex ? "bg-emerald-300" : "bg-white/35 hover:bg-white/55");
       d.dataset.index = String(idx);
       d.addEventListener("click", () => {
         renderSlide(idx);
