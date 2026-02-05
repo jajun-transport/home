@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>JajunTransport</title>
-<meta name="google-site-verification" content="STbPg2B8PJf-NG6YY0Vyu5BLPQd-0UsCl3IL6825RYY" />
+  <meta name="google-site-verification" content="STbPg2B8PJf-NG6YY0Vyu5BLPQd-0UsCl3IL6825RYY" />
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -86,7 +87,7 @@
           Sewa Motor & Mobil di <span class="text-emerald-300">JajunTransport</span>
         </h1>
         <p class="mt-3 text-slate-300 text-base md:text-lg">
-          Pilih unit, lihat harga/hari, isi tanggal ambil & pengembalian, lalu otomatis chat admin.
+          Pilih unit, cek harga/hari, isi tanggal sewa dan selesai sewa, lalu terhubung dengan WhatsApp admin ?
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3">
@@ -101,15 +102,15 @@
         <div class="mt-7 grid grid-cols-3 gap-3 text-sm">
           <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-4 shadow-lg">
             <div class="font-semibold text-slate-100">Harga jelas</div>
-            <div class="text-slate-400 mt-1">Per hari</div>
+            <div class="text-slate-400 mt-1">Per 12 jam/24 jam Mingguan/Bulanan (bisa dikonfirmasi melalui WhatsApp admin)</div>
           </div>
           <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-4 shadow-lg">
             <div class="font-semibold text-slate-100">Status unit</div>
-            <div class="text-slate-400 mt-1">Tersedia/Habis</div>
+            <div class="text-slate-400 mt-1">Tersedia/tersewa</div>
           </div>
           <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-4 shadow-lg">
-            <div class="font-semibold text-slate-100">Form lengkap</div>
-            <div class="text-slate-400 mt-1">Ambil & kembali</div>
+            <div class="font-semibold text-slate-100">Form dilengkap</div>
+            <div class="text-slate-400 mt-1">Sesuai kebutuhan mulai tanggal sewa dan selesai sewa</div>
           </div>
         </div>
       </div>
@@ -217,15 +218,7 @@
       <button class="filterBtn px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-sm text-slate-100"
               data-filter="mobil">Mobil</button>
     </div>
-
-    <!-- NOTE: vehicleGrid sekarang kosong, akan diisi otomatis dari Sheets -->
-    <div id="vehicleGrid" class="mt-7 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-
-    <p class="mt-4 text-xs text-slate-400">
-      Data kendaraan ditarik otomatis dari Google Sheets. Admin cukup update data di dashboard/admin.
-    </p>
-  </section>
-
+    
   <!-- CARA PESAN -->
   <section id="cara" class="mx-auto max-w-7xl px-4 pb-14">
     <div class="rounded-3xl bg-slate-900/60 border border-slate-800 p-6 md:p-8 shadow-lg">
@@ -237,7 +230,7 @@
         </div>
         <div class="rounded-2xl border border-slate-800 bg-slate-950/20 p-5">
           <div class="font-semibold text-slate-100">2) Isi ambil & kembali</div>
-          <div class="mt-1 text-slate-300">Tanggal & jam pengambilan + pengembalian.</div>
+          <div class="mt-1 text-slate-300">Tanggal dan jam mulai sewa dan selesai sewa.</div>
         </div>
         <div class="rounded-2xl border border-slate-800 bg-slate-950/20 p-5">
           <div class="font-semibold text-slate-100">3) Kirim WA</div>
@@ -393,6 +386,7 @@
             </select>
           </div>
 
+
           <div>
             <label class="text-sm font-medium text-slate-200">Jumlah Unit</label>
             <input id="unit" type="number" min="1" value="1"
@@ -400,25 +394,25 @@
           </div>
 
           <div>
-            <label class="text-sm font-medium text-slate-200">Tanggal Ambil</label>
+            <label class="text-sm font-medium text-slate-200">Tanggal mulai sewa</label>
             <input id="tglAmbil" type="date"
               class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
           </div>
 
           <div>
-            <label class="text-sm font-medium text-slate-200">Jam Ambil</label>
+            <label class="text-sm font-medium text-slate-200">Jam mulai sewa</label>
             <input id="jamAmbil" type="time"
               class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
           </div>
 
           <div>
-            <label class="text-sm font-medium text-slate-200">Tanggal Pengembalian</label>
+            <label class="text-sm font-medium text-slate-200">Tanggal selesai</label>
             <input id="tglKembali" type="date"
               class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
           </div>
 
           <div>
-            <label class="text-sm font-medium text-slate-200">Jam Pengembalian</label>
+            <label class="text-sm font-medium text-slate-200">Jam selesai sewa</label>
             <input id="jamKembali" type="time"
               class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
           </div>
@@ -437,7 +431,7 @@
 
           <div class="md:col-span-2">
             <label class="text-sm font-medium text-slate-200">Catatan</label>
-            <textarea id="catatan" rows="3" placeholder="Contoh: lokasi antar/ambil, butuh helm, dll."
+            <textarea id="catatan" rows="3" placeholder="Contoh: lokasi pengantaran/penjemputan unit, tambahan sewa helm bogo/trail dllnya."
               class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-400"></textarea>
           </div>
 
@@ -558,5 +552,3 @@
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
-
-
