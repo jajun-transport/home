@@ -6,6 +6,7 @@
   <title>JajunTransport</title>
   <meta name="google-site-verification" content="STbPg2B8PJf-NG6YY0Vyu5BLPQd-0UsCl3IL6825RYY" />
 
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -218,7 +219,15 @@
       <button class="filterBtn px-4 py-2 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-sm text-slate-100"
               data-filter="mobil">Mobil</button>
     </div>
-    
+
+    <!-- NOTE: vehicleGrid sekarang kosong, akan diisi otomatis dari Sheets -->
+    <div id="vehicleGrid" class="mt-7 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+
+    <p class="mt-4 text-xs text-slate-400">
+      Sewa Motor & Mobil di JajunTransport dengan data kendaraan yang selalu up to date.
+    </p>
+  </section>
+
   <!-- CARA PESAN -->
   <section id="cara" class="mx-auto max-w-7xl px-4 pb-14">
     <div class="rounded-3xl bg-slate-900/60 border border-slate-800 p-6 md:p-8 shadow-lg">
@@ -230,7 +239,7 @@
         </div>
         <div class="rounded-2xl border border-slate-800 bg-slate-950/20 p-5">
           <div class="font-semibold text-slate-100">2) Isi ambil & kembali</div>
-          <div class="mt-1 text-slate-300">Tanggal dan jam mulai sewa dan selesai sewa.</div>
+          <div class="mt-1 text-slate-300">Tanggal dan jam mulai sewa dan selesai sewa..</div>
         </div>
         <div class="rounded-2xl border border-slate-800 bg-slate-950/20 p-5">
           <div class="font-semibold text-slate-100">3) Kirim WA</div>
@@ -388,12 +397,6 @@
 
 
           <div>
-            <label class="text-sm font-medium text-slate-200">Jumlah Unit</label>
-            <input id="unit" type="number" min="1" value="1"
-              class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
-          </div>
-
-          <div>
             <label class="text-sm font-medium text-slate-200">Tanggal mulai sewa</label>
             <input id="tglAmbil" type="date"
               class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
@@ -406,7 +409,7 @@
           </div>
 
           <div>
-            <label class="text-sm font-medium text-slate-200">Tanggal selesai</label>
+            <label class="text-sm font-medium text-slate-200">Tanggal selesai sewa</label>
             <input id="tglKembali" type="date"
               class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
           </div>
@@ -434,7 +437,6 @@
             <textarea id="catatan" rows="3" placeholder="Contoh: lokasi pengantaran/penjemputan unit, tambahan sewa helm bogo/trail dllnya."
               class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-400"></textarea>
           </div>
-
           <!-- Footer actions (sticky in mobile feel) -->
           <div class="md:col-span-2 flex flex-col md:flex-row gap-2 pt-2">
             <button type="submit"
