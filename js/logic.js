@@ -479,7 +479,7 @@ export function bindUIEvents({ onRetry } = {}) {
   });
 
   ["btnChatAdmin","btnChatAdmin2","fabWA"].map(id => $(id)).filter(Boolean).forEach(btn => {
-    btn.addEventListener("click", () => openWA("Halo Admin JajunTransport, saya mau tanya harga & ketersediaan unit."));
+    btn.addEventListener("click", () => openWA("Halo Admin JajunTransport, saya mau tanya harga & ketersediaan unit?"));
   });
 
   document.addEventListener("click", (e) => {
